@@ -11,8 +11,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+output DP-3 pos 0 0 res 1920x1080@165Hz
 
-### STARTUP COMMANDS ###
 # Autostart .desktop files (alternative to dex)
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dex --autostart --environment sway
@@ -34,6 +34,12 @@ exec nm-applet
 ### REFRESH STATUS (not needed unless using i3status) ###
 set $refresh_i3status killall -SIGUSR1 i3status
 
+input type:pointer {
+	accel_profile "flat"
+	pointer_accel -0.5
+}
+
+
 ### AUDIO CONTROLS ###
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -46,7 +52,7 @@ floating_modifier $mod
 ### APPLICATION LAUNCH ###
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
-bindsym $mod+u exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+u exec grim -g "$(slurp -d)" - | wl-copy
 bindsym $mod+d exec wofi --show drun
 
 ### FOCUS ###
