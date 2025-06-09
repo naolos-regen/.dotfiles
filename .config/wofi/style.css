@@ -1,0 +1,50 @@
+* {
+    font-family: "GohuFont uni11 Nerd Font";
+    font-size: 11px;
+    color: #E6E6E6;
+    background-color: transparent;
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0.95); /* @bg0 (#000000F1) */
+    padding: 12px;
+    margin: 0;
+}
+
+#entry {
+    background-color: transparent;
+    padding: 8px 16px;
+    margin: 4px 0;
+    color: #E6E6E6; /* @fg0 */
+}
+
+#entry:selected {
+    background-color: #00a600; /* @bg3 */
+    color: #000000;            /* inverse of highlight */
+}
+
+/* Input field */
+#input {
+    background-color: #000000;   /* @bg1 */
+    color: #E6E6E6;              /* @fg0 */
+    border: 2px solid #00a600;   /* @bg3 */
+    padding: 8px 16px;
+    margin-bottom: 12px;
+}
+
+/* Placeholder text (not natively supported, but fallback styling) */
+#input::placeholder {
+    color: #3D3D3D; /* @fg3 */
+}
+
+scrollbar {
+    background: transparent;
+}
+scrollbar slider {
+    background: #3D3D3D;
+}
+
+/* Optional: Message or extra text */
+label {
+    color: #FFFFFF; /* @fg1 */
+}

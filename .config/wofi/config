@@ -1,0 +1,7 @@
+show=drun
+prompt=Run:
+insensitive=true
+term=alacritty
+location=center
+width=1000
+height=500
