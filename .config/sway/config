@@ -39,6 +39,11 @@ input type:pointer {
 	pointer_accel -0.5
 }
 
+input * {
+	xkb_layout	"us,de"
+	xkb_options	"grp:win_space_toggle"
+}
+
 
 ### AUDIO CONTROLS ###
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
