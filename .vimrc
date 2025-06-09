@@ -79,7 +79,6 @@ highlight WarningMsg    term=reverse      ctermfg=black ctermbg=yellow          
 highlight WildMenu      term=reverse      ctermfg=blue ctermbg=darkgreen                  guifg=#000099 guibg=#00ac00   
 
 " ----------------------------------------------------------------------------------------------------------------------------------
-" Common groups that link to other highlight definitions.
 
 highlight link Character      Constant
 highlight link Number         Constant
@@ -112,5 +111,4 @@ highlight link StorageClass  Type
 highlight link Structure     Type
 highlight link Typedef       Type
 
-" ----------------------------------------------------------------------------------------------------------------------------------
 " vim:tw=132:ts=4:sw=4
