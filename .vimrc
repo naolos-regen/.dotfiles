@@ -3,6 +3,14 @@ filetype plugin indent on
 
 set tabstop=3 softtabstop=3 shiftwidth=3 expandtab autoindent smartindent
 set number relativenumber
+set list splitbelow splitright smartcase undofile confirm
+
+" augroup CenterCursorAlways
+"   autocmd!
+"   autocmd CursorMoved,CursorMovedI * normal! zz
+" augroup END
+
+set scrolloff=777
 
 call plug#begin()
 
