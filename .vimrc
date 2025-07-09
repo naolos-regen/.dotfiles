@@ -9,6 +9,8 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -49,4 +51,11 @@ nnoremap <A-k> :resize -2<cr>
 nnoremap <A-h> :vertical resize -2<cr>
 nnoremap <A-l> :vertical resize +2<cr>
 
+nnoremap <C-p> :Files<cr>
 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call CocActionAsync('doHover')<cr>
