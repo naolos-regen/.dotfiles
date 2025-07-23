@@ -19,10 +19,11 @@ Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'krischik/vim-ada'
 
 call plug#end()
 
-colorscheme seoul256
+colorscheme desert
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 
