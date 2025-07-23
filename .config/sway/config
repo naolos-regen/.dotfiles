@@ -11,8 +11,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-output DP-3 pos 0 0 res 1920x1080@165Hz
-
 # Autostart .desktop files (alternative to dex)
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dex --autostart --environment sway
@@ -26,10 +24,13 @@ exec swayidle -w \
     before-sleep 'swaylock -f'
 
 # Set wallpaper with swaybg
-exec swaybg -i $HOME/Pictures/wall.png --mode fill
-
+exec swaybg -i /home/nao/Pictures/lain_05.jpeg -m fill
+# exec . /home/nao/.config/swww/scriptos.sh
 # Network manager applet (requires tray support, e.g. waybar)
 exec nm-applet
+
+### Notification DEAMON
+exec swaync
 
 ### REFRESH STATUS (not needed unless using i3status) ###
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -120,6 +121,12 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "swaynag -t warning -m 'Exit sway?' -b 'Yes, exit' 'swaymsg exit'"
+
+### NOTIFICATION CLIENT ###
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
+### SWAYLOCK ###
+bindsym $mod+p exec swaylock --image /home/nao/Pictures/lain_02.png --scaling fill --indicator-radius 128 --indicator-thickness 42 --font-size 42
 
 ### RESIZE MODE ###
 mode "resize" {
