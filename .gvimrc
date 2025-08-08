@@ -4,6 +4,8 @@ filetype plugin indent on
 set tabstop=3 softtabstop=3 shiftwidth=3 expandtab autoindent smartindent
 set number relativenumber
 set guifont=BlexMonoNerdFont
+set list splitbelow splitright smartcase undofile confirm
+set wildmenu hlsearch incsearch title
 
 " augroup CenterCursorAlways
 "   autocmd!
@@ -22,7 +24,7 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-colorscheme desert
+colorscheme seoul256 
 set background=dark
 
 let c='a'
@@ -69,5 +71,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gn <Plug>(coc-rename)
 
 nnoremap <silent> K :call CocActionAsync('doHover')<cr>

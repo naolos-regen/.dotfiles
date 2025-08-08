@@ -145,23 +145,24 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
-client.focused          #00a600 #000000 #00ef00 #00FF00
-client.unfocused        #000000 #000000 #00ff00 #000000
-client.focused_inactive #000000 #000000 #00ff00 #000000
+### BORDER COLORS ###
+client.focused          #112a2a #0a1919 #d0d0d0 #112a2a
+client.unfocused        #112a2a #112a2a #d0d0d0 #000000
+client.focused_inactive #112a2a #112a2a #d0d0d0 #000000
 client.urgent           #990000 #e50000 #ffffff #e50000
 
+### BAR ###
 bar {
-	position top
-        status_command i3status --config ~/.config/i3/.i3status.conf
-	colors {
-		background #000000
-		statusline #00FF00
-		separator  #666666
+    position top
+    status_command i3status --config ~/.config/i3/.i3status.conf
+    colors {
+        background #112a2a
+        statusline #d0d0d0
+        separator  #666666
 
-		focused_workspace  #00ff00 #00ff00 #000000
-		active_workspace   #00a600 #00a600 #000000
-		inactive_workspace #000000 #000000 #00ff00
-		urgent_workspace   #990000 #e50000 #ffffff
-	}
+        focused_workspace  #112a2a #0a1919 #d0d0d0
+        active_workspace   #112a2a #0a1919 #d0d0d0
+        inactive_workspace #112a2a #112a2a #d0d0d0
+        urgent_workspace   #112a2a #e50000 #ffffff
+    }
 }

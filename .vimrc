@@ -4,6 +4,8 @@ filetype plugin indent on
 set tabstop=3 softtabstop=3 shiftwidth=3 expandtab autoindent smartindent
 set number relativenumber
 set list splitbelow splitright smartcase undofile confirm
+set wildmenu hlsearch incsearch title
+
 
 " augroup CenterCursorAlways
 "   autocmd!
@@ -19,11 +21,10 @@ Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'krischik/vim-ada'
 
 call plug#end()
 
-colorscheme desert
+colorscheme seoul256
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -64,7 +65,8 @@ nnoremap <C-p> :Files<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gn <Plug>(coc-rename)
 
 nnoremap <silent> K :call CocActionAsync('doHover')<cr>

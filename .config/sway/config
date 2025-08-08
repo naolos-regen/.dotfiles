@@ -20,8 +20,8 @@ exec dex --autostart --environment sway
 
 # Use swayidle + swaylock instead of xss-lock + i3lock
 exec swayidle -w \
-    timeout 300 'swaylock -f' \
-    before-sleep 'swaylock -f'
+    timeout 300 'swaylock -i /home/nao/Pictures/lain_05.jpeg -m fill' \
+    before-sleep 'swaylock -i /home/nao/Pictures/lain_05.jpeg -m fill'
 
 # Set wallpaper with swaybg
 exec swaybg -i /home/nao/Pictures/lain_05.jpeg -m fill
@@ -147,9 +147,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### BORDER COLORS ###
-client.focused          #00a600 #000000 #00ef00 #00FF00
-client.unfocused        #000000 #000000 #00ff00 #000000
-client.focused_inactive #000000 #000000 #00ff00 #000000
+client.focused          #112a2a #0a1919 #d0d0d0 #112a2a
+client.unfocused        #112a2a #112a2a #d0d0d0 #000000
+client.focused_inactive #112a2a #112a2a #d0d0d0 #000000
 client.urgent           #990000 #e50000 #ffffff #e50000
 
 ### BAR ###
@@ -157,14 +157,14 @@ bar {
     position top
     status_command i3status --config ~/.config/i3/.i3status.conf
     colors {
-        background #000000
-        statusline #00FF00
+        background #112a2a
+        statusline #d0d0d0
         separator  #666666
 
-        focused_workspace  #00ff00 #00ff00 #000000
-        active_workspace   #00a600 #00a600 #000000
-        inactive_workspace #000000 #000000 #00ff00
-        urgent_workspace   #990000 #e50000 #ffffff
+        focused_workspace  #112a2a #0a1919 #d0d0d0
+        active_workspace   #112a2a #0a1919 #d0d0d0
+        inactive_workspace #112a2a #112a2a #d0d0d0
+        urgent_workspace   #112a2a #e50000 #ffffff
     }
 }
 
