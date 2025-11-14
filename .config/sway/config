@@ -24,7 +24,7 @@ exec swayidle -w \
     before-sleep 'swaylock -i /home/nao/Pictures/lain_05.jpeg -m fill'
 
 # Set wallpaper with swaybg
-exec swaybg -i /home/nao/Pictures/lain_05.jpeg -m fill
+exec swaybg -i /home/nao/Pictures/wallpaper.jpeg -m fill
 # exec . /home/nao/.config/swww/scriptos.sh
 # Network manager applet (requires tray support, e.g. waybar)
 exec nm-applet
@@ -45,6 +45,16 @@ input * {
 	xkb_options	"grp:win_space_toggle"
 }
 
+output DP-2 {
+        transform 270
+        position 1920 0
+}
+
+output DP-3 {
+        resolution 1920x1080@165Hz
+        position 0 0
+        adaptive_sync disable
+}
 
 ### AUDIO CONTROLS ###
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -147,24 +157,23 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### BORDER COLORS ###
-client.focused          #112a2a #0a1919 #d0d0d0 #112a2a
-client.unfocused        #112a2a #112a2a #d0d0d0 #000000
-client.focused_inactive #112a2a #112a2a #d0d0d0 #000000
-client.urgent           #990000 #e50000 #ffffff #e50000
+client.focused          #112a2a #0A1F1E #d0b892 #112a2a
+client.unfocused        #112a2a #062625 #d0b892 #000000
+client.focused_inactive #112a2a #062625 #d0b892 #000000
+client.urgent           #990000 #d75f5f #e4e4e4 #e50000
 
 ### BAR ###
 bar {
     position top
     status_command i3status --config ~/.config/i3/.i3status.conf
     colors {
-        background #112a2a
-        statusline #d0d0d0
-        separator  #666666
+        background #062625
+        statusline #d0b892
+        separator  #87af87
 
-        focused_workspace  #112a2a #0a1919 #d0d0d0
-        active_workspace   #112a2a #0a1919 #d0d0d0
-        inactive_workspace #112a2a #112a2a #d0d0d0
+        focused_workspace  #112a2a #0A1F1E #d0b892
+        active_workspace   #112a2a #0a1919 #d0b892
+        inactive_workspace #112a2a #112a2a #d0b892
         urgent_workspace   #112a2a #e50000 #ffffff
     }
 }
-

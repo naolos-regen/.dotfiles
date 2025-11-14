@@ -1,6 +1,6 @@
 # Dotfiles
 
-![yessir](screenshot.jpg "🗿")
+![yessir](screenshot.png "🗿")
 
 # TODO
 - [ ] tmux

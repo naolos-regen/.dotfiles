@@ -6,8 +6,9 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xrdb -merge ~/.Xresources
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id feh --bg-scale $HOME/Pictures/wall.png
+exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpeg
 exec --no-startup-id nm-applet
+exec --no-startup-id autorandr --load hell-yeah
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -18,6 +19,12 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 tiling_drag modifier titlebar
+
+# Autostart
+exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+exec --no-startup-id i3-msg 'workspace 2; exec steam'
+exec --no-startup-id i3-msg 'workspace 6; exec discord'
+
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
@@ -87,6 +94,17 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws3 output primary
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output secondary
+workspace $ws7 output secondary
+workspace $ws8 output secondary
+workspace $ws9 output secondary
+workspace $ws10 output secondary
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -98,6 +116,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -146,23 +165,23 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### BORDER COLORS ###
-client.focused          #112a2a #0a1919 #d0d0d0 #112a2a
-client.unfocused        #112a2a #112a2a #d0d0d0 #000000
-client.focused_inactive #112a2a #112a2a #d0d0d0 #000000
-client.urgent           #990000 #e50000 #ffffff #e50000
+client.focused          #112a2a #0A1F1E #d0b892 #112a2a
+client.unfocused        #112a2a #062625 #d0b892 #000000
+client.focused_inactive #112a2a #062625 #d0b892 #000000
+client.urgent           #990000 #d75f5f #e4e4e4 #e50000
 
 ### BAR ###
 bar {
     position top
     status_command i3status --config ~/.config/i3/.i3status.conf
     colors {
-        background #112a2a
-        statusline #d0d0d0
-        separator  #666666
+        background #062625
+        statusline #d0b892
+        separator  #87af87
 
-        focused_workspace  #112a2a #0a1919 #d0d0d0
-        active_workspace   #112a2a #0a1919 #d0d0d0
-        inactive_workspace #112a2a #112a2a #d0d0d0
+        focused_workspace  #112a2a #0A1F1E #d0b892
+        active_workspace   #112a2a #0a1919 #d0b892
+        inactive_workspace #112a2a #112a2a #d0b892
         urgent_workspace   #112a2a #e50000 #ffffff
     }
 }

@@ -125,18 +125,18 @@ x = 6
 y = 6
 
 [colors.primary]
-background = "#112a2a"
-foreground = "#d0d0d0"
+background = "#062625"
+foreground = "#d0b892"
 
 [colors.normal]
-black   = "#4e4e4e"
-red     = "#d68787"
-green   = "#5f865f"
-yellow  = "#d8af5f"
-blue    = "#85add4"
-magenta = "#d7afaf"
-cyan    = "#87afaf"
-white   = "#d0d0d0"
+black   = "#4a4a4a"
+red     = "#f92672"
+green   = "#a6e22e"
+yellow  = "#e6db74"
+blue    = "#66d9ef"
+magenta = "#fd5ff0"
+cyan    = "#a1efe4"
+white   = "#d0b892"
 
 [colors.bright]
 black   = "#626262"
