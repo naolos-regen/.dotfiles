@@ -1,7 +1,5 @@
 # Dotfiles
 
-![yessir](screenshot.png "🗿")
-
 # TODO
 - [ ] tmux
 - [ ] auto-install font
