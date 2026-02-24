@@ -23,7 +23,7 @@ execute pathogen#helptags()
 "!git clone https://github.com/vlime/vlime.git ~/.vim/bundle/vlime
 
 colorscheme seoul256
-set background=dark
+"set background=dark
 
 hi Normal guibg=NONE ctermbg=NONE
 highlight Comment guifg=#d1b897
