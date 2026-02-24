@@ -2,8 +2,6 @@
 
 # TODO
 - [ ] tmux
-- [ ] auto-install font
-- [ ] auto-install dotfiles
 
 sources 
 
