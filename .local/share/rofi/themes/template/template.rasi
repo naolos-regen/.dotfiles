@@ -1,90 +1,63 @@
-/* ROUNDED THEME FOR ROFI */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
-
 * {
-    font:   "GohuFont uni11 Nerd Font 8";
-
-    background-color:   transparent;
-    text-color:         @fg0;
-
-    margin:     0px;
-    padding:    0px;
-    spacing:    0px;
-}
-
-window {
-    location:       north;
-    y-offset:       calc(50% - 176px);
-    width:          480;
-    background-color:   @bg0;
-}
-
-mainbox {
-    padding:    12px;
-}
-
-inputbar {
-    background-color:   @bg1;
-    border-color:       @bg3;
-
-    border:         2px;
-
-    padding:    8px 16px;
-    spacing:    8px;
-    children:   [ prompt, entry ];
-}
-
-prompt {
-    text-color: @fg2;
+	background-color: @bg0;
+	text-color: @fg0;
+	border-color: @bg1;
 }
 
 entry {
-    placeholder:        "Search";
-    placeholder-color:  @fg3;
+	font: inherit;
+	cursor: text;
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+	background-color: @bg1;
+	padding: 2px;
+	border-radius: 4px;
 }
 
-message {
-    margin:             12px 0 0;
-    border-color:       @bg2;
-    background-color:   @bg2;
+mode-switcher {
+	spacing: 1px;
 }
 
-textbox {
-    padding:    8px 24px;
+button {
+	background-color: @bg1;
+	color: @fg0;
+	padding: 6px 12px;
+	border-radius: 4px;
+}
+
+button selected {
+	background-color: @fg2; 
+}
+
+icon-keyboard {
+	filename: "keyboard";
+}
+
+window {
+	anchor: north;
+	location: north;
+	width: 100%;
+	border: 0em 0.2em 0.2em;
+	background-color: @bg0;
 }
 
 listview {
-    background-color:   transparent;
-
-    margin:     12px 0 0;
-    lines:      8;
-    columns:    1;
-
-    fixed-height: false;
+	lines: 1;
+	columns: 42;
+	spacing: 1em;
+	fixed-columns: false;
+	background-color: @bg1;
 }
 
 element {
-    padding:        8px 16px;
-    spacing:        8px;
+	orientation: vertical;
+	background-color: @bg0;
+	cursor: pointer;
+	padding: 4px;
+	color: @fg0;
 }
 
-element normal active {
-    text-color: @bg3;
+element selected {
+	background-color: @bg3;
 }
 
-element alternate active {
-    text-color: @bg3;
-}
-
-element selected normal, element selected active {
-    background-color:   @bg3;
-}
-
-element-icon {
-    size:           1em;
-    vertical-align: 0.5;
-}
-
-element-text {
-    text-color: inherit;
-}

@@ -1,3 +1,4 @@
+set $wallpaper  "~/Wallpapers/voyager.png"
 set $font	Hack
 set $fontcolor  #c9c6d2
 set $background #4a4a4a

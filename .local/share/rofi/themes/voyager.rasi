@@ -1,0 +1,13 @@
+* {
+	font:   "Hack 12";
+	bg0:    #000000;
+	bg1:    #000000;
+	bg2:    #000000;
+	bg3:    #c9c6d2;
+	fg0:    #c9c6d2;
+	fg1:    #c9c6d2;
+	fg2:    #c9c6d2;
+	fg3:    #c9c6d2;
+}
+
+@import "template/template.rasi"

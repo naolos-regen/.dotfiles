@@ -1,0 +1,13 @@
+* {
+	font: "3270NerdFont 12";
+	bg0:    #003a8a;
+	bg1:    #003a8a;
+	bg2:    #003a8a;
+	bg3:    #add4fb;
+	fg0:    #E6E6E6;
+	fg1:    #FFFFFF;
+	fg2:    #969696;
+	fg3:    #3D3D3D;
+}
+
+@import "template/template.rasi"

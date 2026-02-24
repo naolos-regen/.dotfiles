@@ -1,0 +1,13 @@
+* {
+	font:   "IosevkaNerdFont 12";
+	bg0:    #000000;
+	bg1:    #000000;
+	bg2:    #000000;
+	bg3:    #d0b892;
+	fg0:    #d0b892;
+	fg1:    #d0b892;
+	fg2:    #d0b892;
+	fg3:    #d0b892;
+}
+
+@import "template/template.rasi"

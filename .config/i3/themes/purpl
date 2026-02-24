@@ -1,3 +1,4 @@
+set $wallpaper   "~/Wallpapers/purpl.png"
 set $font	 UbuntuNerdFont
 set $fontcolor #fafafa
 set $background #1E091E

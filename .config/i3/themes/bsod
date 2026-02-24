@@ -1,3 +1,4 @@
+set $wallpaper   "~/Wallpapers/bsod.png"
 set $font	 VictorMonoNerdFOnt
 set $fontcolor   #FFFFFF
 set $background  #003a8a

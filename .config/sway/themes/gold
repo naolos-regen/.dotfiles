@@ -1,3 +1,4 @@
+set $wallpaper  "~/Wallpapers/gold.png"
 set $font	IosevkaNerdFont
 set $fontcolor	#d0b892
 set $background #0a0a0a
