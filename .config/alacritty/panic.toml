@@ -1,0 +1,40 @@
+[colors.primary]
+background = "#defded"
+foreground = "#0a0a0a"
+
+[colors.normal]
+black   = "#4a4a4a"
+red     = "#470811"
+green   = "#212D09"
+yellow  = "#736D3A"
+blue    = "#0A2330"
+magenta = "#450E41"
+cyan    = "#0B2D28"
+white   = "#0a0a0a"
+
+[colors.bright]
+black   = "#626262"
+red     = "#d75f5f"
+green   = "#87af87"
+yellow  = "#ffd787"
+blue    = "#add4fb"
+magenta = "#ffafaf"
+cyan    = "#87d7d7"
+white   = "#0a0a0a"
+
+[font.bold]
+family = "3270NerdFont"
+style = "Bold"
+
+[font.bold_italic]
+family = "3270NerdFont"
+style = "Bold Italic"
+
+[font.italic]
+family = "3270NerdFont"
+style = "Italic"
+
+[font.normal]
+family = "3270NerdFont"
+style = "Regular"
+

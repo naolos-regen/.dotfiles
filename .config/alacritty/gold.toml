@@ -1,0 +1,40 @@
+[colors.primary]
+background = "#000000"
+foreground = "#d0b892"
+
+[colors.normal]
+black   = "#4a4a4a"
+red     = "#f92672"
+green   = "#a6e22e"
+yellow  = "#e6db74"
+blue    = "#66d9ef"
+magenta = "#fd5ff0"
+cyan    = "#a1efe4"
+white   = "#d0b892"
+
+[colors.bright]
+black   = "#626262"
+red     = "#d75f5f"
+green   = "#87af87"
+yellow  = "#ffd787"
+blue    = "#add4fb"
+magenta = "#ffafaf"
+cyan    = "#87d7d7"
+white   = "#e4e4e4"
+
+[font.bold]
+family = "IosevkaNerdFont"
+style = "Bold"
+
+[font.bold_italic]
+family = "IosevkaNerdFont"
+style = "Bold Italic"
+
+[font.italic]
+family = "IosevkaNerdFont"
+style = "Italic"
+
+[font.normal]
+family = "IosevkaNerdFont"
+style = "Regular"
+

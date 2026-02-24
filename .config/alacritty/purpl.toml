@@ -1,0 +1,41 @@
+[colors.primary]
+background = "#1E091E"
+foreground = "#fafafa"
+
+[colors.normal]
+black   = "#4a4a4a"
+red     = "#f92672"
+green   = "#a6e22e"
+yellow  = "#e6db74"
+blue    = "#66d9ef"
+magenta = "#fd5ff0"
+cyan    = "#a1efe4"
+white   = "#fafafa"
+
+[colors.bright]
+black   = "#626262"
+red     = "#d75f5f"
+green   = "#87af87"
+yellow  = "#ffd787"
+blue    = "#add4fb"
+magenta = "#ffafaf"
+cyan    = "#87d7d7"
+white   = "#fafafa"
+
+
+[font.bold]
+family = "UbuntuMonoNerdFont"
+style = "Bold"
+
+[font.bold_italic]
+family = "UbuntuMonoNerdFont"
+style = "Bold Italic"
+
+[font.italic]
+family = "UbuntuMonoNerdFont"
+style = "Italic"
+
+[font.normal]
+family = "UbuntuMonoNerdFont"
+style = "Regular"
+

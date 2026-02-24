@@ -16,7 +16,6 @@ set scrolloff=777
 
 call plug#begin()
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -34,16 +33,6 @@ while c <= 'z'
   let c = nr2char(1+char2nr(c))
 endw
 set timeout ttimeoutlen=50
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
 
 inoremap <C-b> <Esc>:NERDTreeToggle<cr>
 nnoremap <C-b> <Esc>:NERDTreeToggle<cr>
@@ -66,11 +55,3 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 set guioptions-=L
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gn <Plug>(coc-rename)
-
-nnoremap <silent> K :call CocActionAsync('doHover')<cr>

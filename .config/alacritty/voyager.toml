@@ -1,0 +1,40 @@
+[colors.primary]
+background = "#000000"
+foreground = "#c9c6d2"
+
+[colors.normal]
+black   = "#4a4a4a"
+red     = "#f92672"
+green   = "#a6e22e"
+yellow  = "#e6db74"
+blue    = "#66d9ef"
+magenta = "#fd5ff0"
+cyan    = "#a1efe4"
+white   = "#b9b6d2"
+
+[colors.bright]
+black   = "#626262"
+red     = "#d75f5f"
+green   = "#87af87"
+yellow  = "#ffd787"
+blue    = "#add4fb"
+magenta = "#ffafaf"
+cyan    = "#87d7d7"
+white   = "#b9b6d2"
+
+[font.bold]
+family = "Hack"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack"
+style = "Italic"
+
+[font.normal]
+family = "Hack"
+style = "Regular"
+

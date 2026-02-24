@@ -1,0 +1,12 @@
+set $font	 VictorMonoNerdFOnt
+set $fontcolor   #FFFFFF
+set $background  #003a8a
+set $foreground  #f3f3f3
+set $black	 #000000
+set $red	 #ff2626
+set $green	 #f6e22e
+set $yellow	 #e6db74
+set $blue	 #5EBCDE
+set $magenta	 #fd5ff0
+set $cyan	 #a1efe4
+set $white	 #dedede

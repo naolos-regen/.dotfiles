@@ -1,15 +1,26 @@
 set $mod Mod4
 
-font pango:GohuFont uni11 Nerd Font 8
+set $font	IosevkaNerdFont
+set $fontcolor	#d0b892
+set $background #0a0a0a
+set $foreground #d0b892
+set $black	#000000
+set $red	#f92672
+set $green	#a6e22e
+set $yellow	#e6db74
+set $blue	#000000
+set $magenta	#fd5ff0
+set $cyan	#a1efe4
+set $white	#d0b892
+
+font pango:$font 8
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xrdb -merge ~/.Xresources
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpeg
 exec --no-startup-id nm-applet
-exec --no-startup-id autorandr --load hell-yeah
-
+exec --no-startup-id autorandr --load hzUp
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -19,12 +30,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 tiling_drag modifier titlebar
-
-# Autostart
-exec --no-startup-id i3-msg 'workspace 1; exec firefox'
-exec --no-startup-id i3-msg 'workspace 2; exec steam'
-exec --no-startup-id i3-msg 'workspace 6; exec discord'
-
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
@@ -137,6 +142,25 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+# i3-gaps configuration
+gaps inner 10
+gaps outer 0
+smart_gaps on
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $modkey+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -165,23 +189,28 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### BORDER COLORS ###
-client.focused          #112a2a #0A1F1E #d0b892 #112a2a
-client.unfocused        #112a2a #062625 #d0b892 #000000
-client.focused_inactive #112a2a #062625 #d0b892 #000000
-client.urgent           #990000 #d75f5f #e4e4e4 #e50000
+client.focused          #000000		$background	$fontcolor	#000000
+client.unfocused        #000000		$blue		$fontcolor	#000000
+client.focused_inactive #000000		$black		$fontcolor	#000000
+client.urgent           #990000		$black		$red		#000000
 
-### BAR ###
 bar {
-    position top
+    position bottom
     status_command i3status --config ~/.config/i3/.i3status.conf
     colors {
-        background #062625
-        statusline #d0b892
-        separator  #87af87
+        background $background
+        statusline $white
+        separator  $green
 
-        focused_workspace  #112a2a #0A1F1E #d0b892
-        active_workspace   #112a2a #0a1919 #d0b892
-        inactive_workspace #112a2a #112a2a #d0b892
-        urgent_workspace   #112a2a #e50000 #ffffff
+        focused_workspace  $background	$blue		$fontcolor
+        active_workspace   $background	$background	$fontcolor
+        inactive_workspace $background	$background	$fontcolor
+        urgent_workspace   $background	$red		$black
     }
 }
+
+# Autostart
+exec --no-startup-id sh -c "sleep 3; i3-msg 'workspace 1; exec firefox'"
+exec --no-startup-id sh -c "sleep 3; i3-msg 'workspace 2; exec steam'"
+exec --no-startup-id sh -c "sleep 3; i3-msg 'workspace 6; exec discord'"
+

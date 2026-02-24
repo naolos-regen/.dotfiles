@@ -1,0 +1,12 @@
+set $font	IosevkaNerdFont
+set $fontcolor	#d0b892
+set $background #0a0a0a
+set $foreground #d0b892
+set $black	#000000
+set $red	#f92672
+set $green	#a6e22e
+set $yellow	#e6db74
+set $blue	#000000
+set $magenta	#fd5ff0
+set $cyan	#a1efe4
+set $white	#d0b892

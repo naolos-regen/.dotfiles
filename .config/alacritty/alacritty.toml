@@ -1,24 +1,13 @@
+[general]
+import = [
+	"~/.config/alacritty/gold.toml"
+]
+
 [env]
 TERM = "xterm-256color"
 
 [font]
 size = 12.0
-
-[font.bold]
-family = "BlexMonoNerdFont"
-style = "Bold"
-
-[font.bold_italic]
-family = "BlexMonoNerdFont"
-style = "Bold Italic"
-
-[font.italic]
-family = "BlexMonoNerdFont"
-style = "Italic"
-
-[font.normal]
-family = "BlexMonoNerdFont"
-style = "Regular"
 
 [font.offset]
 x = 0
@@ -113,7 +102,7 @@ history = 5000
 
 [window]
 dynamic_padding = false
-opacity = 0.942 
+opacity = 0.9
 title = "Alacritty"
 
 [window.class]
@@ -124,26 +113,4 @@ instance = "Alacritty"
 x = 6
 y = 6
 
-[colors.primary]
-background = "#062625"
-foreground = "#d0b892"
 
-[colors.normal]
-black   = "#4a4a4a"
-red     = "#f92672"
-green   = "#a6e22e"
-yellow  = "#e6db74"
-blue    = "#66d9ef"
-magenta = "#fd5ff0"
-cyan    = "#a1efe4"
-white   = "#d0b892"
-
-[colors.bright]
-black   = "#626262"
-red     = "#d75f5f"
-green   = "#87af87"
-yellow  = "#ffd787"
-blue    = "#add4fb"
-magenta = "#ffafaf"
-cyan    = "#87d7d7"
-white   = "#e4e4e4"
