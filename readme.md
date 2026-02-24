@@ -2,6 +2,7 @@
 
 # TODO
 - [ ] tmux
+- [ ] linked workspace, instead of copying link it
 
 sources 
 
